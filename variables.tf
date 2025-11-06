@@ -44,3 +44,13 @@ variable "key_name" {
   description = "ssh key pair name"
   type = string
 }
+
+variable "jump_server_name" {
+  description = "jump server name"
+  type        = string
+}
+
+variable "private_server_name" {
+  description = "private server name"
+  type        = string
+}

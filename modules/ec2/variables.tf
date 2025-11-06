@@ -27,3 +27,13 @@ variable "private_subnet_id" {
   description = "private subnet id for private server"
   type = string
 }
+
+variable "jump_server_name" {
+  description = "jump server name"
+  type        = string
+}
+
+variable "private_server_name" {
+  description = "private server name"
+  type        = string
+}
