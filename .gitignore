@@ -1,0 +1,10 @@
+# .gitignore
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+crash.log
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
