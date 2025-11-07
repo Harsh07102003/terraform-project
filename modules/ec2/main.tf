@@ -5,12 +5,26 @@ resource "aws_instance" "jump_server" {
   subnet_id = var.public_subnet_id
   vpc_security_group_ids = [aws_security_group.jump_sg.id]
   key_name = var.key_name
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   tags = {
     Name = var.jump_server_name
   }
 }
+
+# Attach Elastic IP to Jump Server
+resource "aws_eip" "jump_eip" {
+  domain = "vpc"
+  tags = {
+    Name = "jump-eip"
+  }
+}
+
+resource "aws_eip_association" "jump_eip_assoc" {
+  instance_id   = aws_instance.jump_server.id
+  allocation_id = aws_eip.jump_eip.id
+}
+
 
 # private server
 resource "aws_instance" "private_server" {
