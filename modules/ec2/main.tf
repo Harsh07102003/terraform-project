@@ -5,7 +5,7 @@ resource "aws_instance" "jump_server" {
   subnet_id = var.public_subnet_id
   vpc_security_group_ids = [aws_security_group.jump_sg.id]
   key_name = var.key_name
-  associate_public_ip_address = false
+  associate_public_ip_address = true
 
   tags = {
     Name = var.jump_server_name
