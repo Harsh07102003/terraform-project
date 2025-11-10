@@ -16,7 +16,7 @@ resource "aws_instance" "jump_server" {
 resource "aws_eip" "jump_eip" {
   domain = "vpc"
   tags = {
-    Name = "jump-eip"
+    Name = "${var.jump_server_name}-eip"
   }
 }
 
