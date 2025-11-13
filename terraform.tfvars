@@ -27,5 +27,3 @@ jump_server_name = "jump-server"
 private_server_name = "private-server"
 
 bucket_name = "tf-state-ozxcs"
-
-dynamodb_table_name = "tf-state-table"
