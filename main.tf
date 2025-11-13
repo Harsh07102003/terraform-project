@@ -18,7 +18,7 @@ module "ec2" {
   private_subnet_id = module.vpc.private_subnet_ids[0]
 }
 
-module "s3" {
-  source = "./modules/s3"
-  bucket_name = var.bucket_name
-}
+# module "s3" {
+#   source = "./modules/s3"
+#   bucket_name = var.bucket_name
+# }

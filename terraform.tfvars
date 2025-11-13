@@ -20,10 +20,10 @@ ami_id = "ami-02b8269d5e85954ef"
 
 instance_type = "t3.micro"
 
-key_name = "my-key-pair"
+key_name = "my-key-pair1"
 
 jump_server_name = "jump-server"
 
 private_server_name = "private-server"
 
-bucket_name = "tf-state-ozxcs"
+# bucket_name = "tf-state-ozxcs"
