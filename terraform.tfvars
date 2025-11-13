@@ -20,7 +20,7 @@ ami_id = "ami-02b8269d5e85954ef"
 
 instance_type = "t3.micro"
 
-key_name = "my-key-pair1"
+key_name = "my-key-pair"
 
 jump_server_name = "jump-server"
 
