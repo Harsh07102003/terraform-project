@@ -8,7 +8,7 @@ resource "aws_instance" "jump_server" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "jump-server"
+    Name = var.jump_server_name
   }
 }
 
@@ -16,7 +16,7 @@ resource "aws_instance" "jump_server" {
 resource "aws_eip" "jump_eip" {
   domain = "vpc"
   tags = {
-    Name = "jump-server-eip"
+    Name = "${var.jump_server_name}-eip"
   }
 }
 
@@ -35,6 +35,6 @@ resource "aws_instance" "private_server" {
   key_name = var.key_name
 
   tags = {
-    Name = "private-server"
+    Name = var.private_server_name
   }
 }

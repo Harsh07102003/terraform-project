@@ -8,6 +8,8 @@ module "vpc" {
 
 module "ec2" {
   source = "./modules/ec2"
+  jump_server_name = var.jump_server_name
+  private_server_name = var.private_server_name
   ami_id = var.ami_id
   instance_type = var.instance_type
   key_name = var.key_name
