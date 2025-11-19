@@ -22,8 +22,4 @@ instance_type = "t3.micro"
 
 key_name = "my-key-pair"
 
-jump_server_name = "jump-server"
-
-private_server_name = "private-server"
-
 # bucket_name = "tf-state-ozxcs"
